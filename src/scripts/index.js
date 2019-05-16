@@ -1,10 +1,11 @@
+import '../styles/index.scss';
 
-function startCar(carId) {
-	let message = 'Starting...';
-	let startFn = function turnKey() {
-		console.log(message);
-	};
-	startFn();
-}
+let intervalId = setInterval( function() {
+    console.log('1 second passed...');  
+}, 1000);
 
-startCar(123);
+clearInterval(intervalId);
+
+// console.log('Breakpoint');
+// console.log(window.innerWidth);
+// console.log(window.innerHeight);
