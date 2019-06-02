@@ -1,11 +1,13 @@
 import '../styles/index.scss';
 
-let intervalId = setInterval( function() {
-    console.log('1 second passed...');  
-}, 1000);
+let promise = new Promise(
+    function(resolve, reject) {
+        setTimeout(reject, 100, 'someValue');
+    }
+);
+promise.then(
+    value => console.log('fulfilled: ' + value),
+    error => console.log('rejected: ' + error)
+);
+console.log(promise);
 
-clearInterval(intervalId);
-
-// console.log('Breakpoint');
-// console.log(window.innerWidth);
-// console.log(window.innerHeight);

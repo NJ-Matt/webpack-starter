@@ -4,6 +4,10 @@ body {
   color: $body-color;
   .test{
     color: red;
-    text-align: center;
+    text-align: left;
+  };
+  .other{
+    color: green;
+    text-align: right;
   }
 }
